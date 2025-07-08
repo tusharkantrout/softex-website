@@ -1,43 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SOFTeX Consulting Group</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      padding: 40px;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: #333; }
+    header { background: linear-gradient(to right, #04361c, #076842); color: white; padding: 4rem 1rem; text-align: center; }
+    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; animation: fadeIn 2s ease-in-out; }
+    nav { background: #03361d; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 999; }
+    nav a { color: white; margin: 0 1.5rem; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #00ffbb; }
+    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+    .section-title { font-size: 2.3rem; margin-bottom: 1.5rem; color: #054d28; text-align: center; }
+    .service-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-8px); }
+    footer { background: #03361d; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+    .contact-info { text-align: center; margin-bottom: 2rem; font-size: 1.1rem; }
+    .qr { text-align: center; margin-top: 1rem; }
+    img.logo { width: 110px; margin-bottom: 1rem; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    img {
-      max-width: 200px;
-      margin-bottom: 20px;
-    }
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-      display: inline-block;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      font-size: 18px;
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .section-title { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="logo.png" alt="SOFTeX Logo" />
-    <h1>SOFTeX Consulting Group</h1>
-    <p>Empowering Tomorrow, Consulting Today</p>
-    <p>Contact: +91-9438031457<br>Email: softex@yahoo.com</p>
-    <img src="qr-code.png" alt="Scan QR for Contact" />
-  </div>
+  <header>
+    <img src="logo.png" alt="SOFTeX Logo" class="logo" />
+    <h1>SOFTeX CONSULTING GROUP</h1>
+    <p>Empowering Tomorrow. Consulting Today.</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p style="text-align:center;">At SOFTeX Consulting Group, we are passionate about transforming businesses with technology. With expertise in IT consulting, AI/ML, Web Development, and Cybersecurity, we help startups and enterprises thrive in the digital age. Founded with a vision to deliver excellence and innovation, SOFTeX is your trusted growth partner.</p>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="service-list">
+      <div class="card">
+        <h3>IT & Business Consulting</h3>
+        <p>Smart strategies to optimize business processes and digital transformation.</p>
+      </div>
+      <div class="card">
+        <h3>AI/ML Solutions</h3>
+        <p>AI-driven automation, predictive analytics, and intelligent insights.</p>
+      </div>
+      <div class="card">
+        <h3>Web & App Development</h3>
+        <p>Responsive websites, scalable apps, and custom software solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <p>Secure your data and digital infrastructure with top-grade solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Branding</h3>
+        <p>Logo, identity design, digital marketing, and SEO strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> +91-9438031457</p>
+      <p><strong>Email:</strong> softex_cg@yahoo.com</p>
+      <p><strong>Website:</strong> <a href="https://scg.co.in" target="_blank">https://scg.co.in</a></p>
+    </div>
+    <div class="qr">
+      <img src="qr-code.png" alt="QR Code" width="160" />
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SOFTeX Consulting Group. All rights reserved.</p>
+  </footer>
 </body>
 </html>
